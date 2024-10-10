@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduShare Platform - EJM LEH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to EJM Leh NOTES SHARING Platform</h1>
+        <p>A collaborative platform to share and access study materials for Arts, BCom, and BSc students.</p>
+    </header>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide Images -->
+            <div class="slide">
+                <img src="./logo.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="./mypic.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="./welcome.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="slide4.jpg" alt="Slide 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>Our Mission</h2>
+        <p>To build a community where students can easily exchange notes, projects, and study resources, making learning accessible and collaborative.</p>
+    </div>
+
+    <div class="button-container">
+        <a href="../arts/index.html" class="btn">NOTES FOR ARTS</a>
+        <br><br><br>
+        <a href="../bcom/index.html" class="btn">NOTES FOR BCom</a>
+        <br><br><br>
+        <a href="../bsc/index.html" class="btn">NOTES FOR BSc</a>
+        <br><br><br>
+        <a href="../another class/index.html" class="btn">class 8 to 12 NOTES</a>
+    </div>
+    
+    <!-- About Me Section -->
+    <section class="about-me">
+        <h2>About Me</h2>
+        <img src="./mypic.jpg" alt="Creator's Photo" style="width:150px;height:150px;border-radius:50%;">
+        <p>Hello, I'm Zahir khan, the creator of this website. I made this platform to help students access study resources easily, collaborate with peers, and enhance their learning experience. I believe that by sharing knowledge, we can build a stronger and more informed community.</p>
+    </section>
+
+    <!-- About the Team Section -->
+    <section class="about-team">
+        <h2>About the Team</h2>
+        <img src="./friend.jpg" alt="Friend's Photo" style="width:150px;height:150px;border-radius:50%;">
+        <p>This platform will be run by my friend, NAZAKAT. He will be actively managing the website, collecting notes, and guiding students on how to use the platform effectively. His dedication and commitment to supporting students will ensure that this platform continues to grow as a valuable resource for everyone.</p>
+    </section>
+
+    <!-- Complaint Section -->
+    <section class="complaint-form">
+        <h2>Have a Complaint or Suggestion?</h2>
+        <p>Feel free to reach out to us by filling in the details below:</p>
+        <form action="submit_complaint.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+            <br><br>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br><br>
+            
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EduShare Platform - EJM LEH. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for automatic slider -->
+    <script>
+        let slides = document.querySelector('.slides');
+        let slideIndex = 0;
+
+        // Automatically move to the next slide every 3 seconds
+        setInterval(() => {
+            slideIndex++;
+            if (slideIndex > 3) slideIndex = 0;  // Reset index if it exceeds the number of slides
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`; // Slide transition
+        }, 3000); // 3 seconds
+    </script>
+</body>
+</html>
